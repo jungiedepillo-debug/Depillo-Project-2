@@ -155,7 +155,7 @@
       "<time", dateTime, ">", escapeHtml(event.dateLabel), "</time>",
       "</div>",
       "<p class=\"life-event-detail-description\">", escapeHtml(event.description), "</p>",
-      "<div class=\"life-event-photo-grid\" aria-label=\"Event photographs\">",
+      "<div class=\"life-event-photo-grid\" aria-label=\"Event gallery\">",
       event.photos.map(function (photo, index) {
         return "<button type=\"button\" class=\"life-event-photo\" data-photo-index=\"" + index + "\" aria-label=\"Enlarge photograph " + (index + 1) + "\"><img src=\"" + escapeHtml(photo.src) + "\" alt=\"" + escapeHtml(photo.alt) + "\" loading=\"lazy\"></button>";
       }).join(""),
