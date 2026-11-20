@@ -165,49 +165,41 @@ section {
 ========================================================= */
 
 #hero {
-  background: var(--kcc-midnight);
+  background-color: var(--kcc-midnight);
+  background-image:
+    linear-gradient(rgba(8, 13, 24, 0.08), rgba(8, 13, 24, 0.08)),
+    url("../img/hero-bg.webp");
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+}
+
+#hero.kcc-hero {
+  min-height: 0;
+  padding: 0 0 44px;
+  align-items: flex-start;
 }
 
 #hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(
-      circle at 50% 35%,
-      rgba(212, 175, 55, 0.09),
-      transparent 55%
-    );
+  background: radial-gradient(circle at 50% 35%, rgba(212, 175, 55, 0.09), transparent 55%);
   pointer-events: none;
 }
 
-.kcc-hero-artwork {
-  position: relative;
-  z-index: 1;
+.kcc-hero-inner {
   width: 100%;
-  overflow: hidden;
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  border-radius: 12px;
-  background: var(--kcc-navy);
-  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.35);
-}
-
-.kcc-hero-artwork img {
-  position: static;
-  inset: auto;
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  padding-top: 56.25vw;
 }
 
 .kcc-hero-bottom {
   position: relative;
   z-index: 2;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .kcc-hero-bottom h2 {
@@ -1148,16 +1140,7 @@ button:focus-visible {
   }
 
   #hero.kcc-hero {
-    padding: 30px 0 44px;
-  }
-
-  #hero .kcc-hero-artwork {
-    border-radius: 10px;
-  }
-
-  #hero .kcc-hero-artwork::after {
-    width: 28%;
-    animation-duration: 12s;
+    padding-bottom: 36px;
   }
 
   .hero-actions {
@@ -1172,8 +1155,6 @@ button:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   #hero.kcc-hero::before,
-  #hero .kcc-hero-artwork,
-  #hero .kcc-hero-artwork::after,
   #hero .kcc-hero-bottom {
     animation: none !important;
   }
