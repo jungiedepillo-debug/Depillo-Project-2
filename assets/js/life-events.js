@@ -123,7 +123,7 @@
         : "";
 
       return [
-        "<article class=\"life-event-card\" style=\"animation-delay:", String(index * 70), "ms\">",
+        "<article class=\"life-event-card\">",
         "<div class=\"life-event-cover\">",
         "<img src=\"", escapeHtml(event.cover), "\" alt=\"", escapeHtml(event.photos[0].alt), "\" loading=\"lazy\">",
         "<span class=\"life-event-category\">", escapeHtml(event.category), "</span>",
